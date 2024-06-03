@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Syncopate;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background-color: #151515;
+
+  #logo {
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 3.5rem;
+    }
+  }
+
+  #links-container {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    a {
+      color: white;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+main {
+  .main-container {
+    min-height: 90vh;
+    width: 100vw;
+    background-image: url("thor-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  h1 {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 50vw;
+    text-shadow: 1px 1px 1px rgba(135, 135, 135, 0.416);
+  }
+}
