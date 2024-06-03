@@ -57,8 +57,8 @@ main {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    gap: 1rem;
+    align-items: center;
     padding: 4rem;
   }
 
@@ -73,5 +73,71 @@ main {
     line-height: 1.5rem;
     width: 50vw;
     text-shadow: 1px 1px 1px rgba(135, 135, 135, 0.416);
+  }
+}
+
+@media (width <= 600px) {
+  nav {
+    background-color: yellow;
+    #links-container {
+      a {
+        color: black;
+      }
+    }
+  }
+
+  main {
+    .main-container {
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    background-color: lightgreen;
+    #links-container {
+      a {
+        color: black;
+      }
+    }
+  }
+
+  main {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    background-color: red;
+    #links-container {
+      a {
+        color: white;
+      }
+    }
+  }
+
+  main {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    background-color: black;
+    #links-container {
+      a {
+        color: white;
+      }
+    }
   }
 }
