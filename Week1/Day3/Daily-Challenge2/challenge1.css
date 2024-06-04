@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+
+  gap: 0.2rem;
+
+  div {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .box-one {
+    background-color: #fd5a09;
+  }
+
+  .box-two {
+    background-color: #fea25a;
+  }
+
+  .box-three {
+    background-color: #953803;
+  }
+}
