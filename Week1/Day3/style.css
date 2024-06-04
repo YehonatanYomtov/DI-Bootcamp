@@ -195,7 +195,6 @@ main {
     }
 
     #what-i-do-section-grid {
-      height: 20rem;
       display: grid;
       justify-content: center;
       align-items: center;
@@ -222,7 +221,7 @@ main {
 
         h4 {
           color: var(--main-clr-grey-dark);
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
 
         article {
@@ -240,5 +239,67 @@ footer {
   p {
     font-size: 0.9rem;
     color: var(--main-clr-grey);
+  }
+}
+
+@media (max-width: 950px) {
+  #about-section {
+    flex-direction: column;
+
+    #about-text-container {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    #about-section {
+      #about-img-container {
+        height: 17rem;
+        width: 17rem;
+      }
+
+      #about-text-container {
+        h1 {
+          font-size: 2rem;
+        }
+
+        article {
+          padding: 2rem;
+          width: fit-content;
+        }
+
+        #about-buttons-container {
+          #download-cv-btn {
+            padding: 0.5rem 1.2rem;
+          }
+
+          #contact-btn {
+            padding: 0.4rem 1.1rem;
+          }
+        }
+      }
+    }
+
+    #what-i-do-section-grid {
+      padding: 2rem;
+
+      .box {
+        grid-column: 1 / span 2;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  #about-buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 }
