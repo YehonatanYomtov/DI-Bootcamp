@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  width: 20vw;
+  height: 34vh;
+  transition: all 0.4s ease;
+  margin: 2vh 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  color: white;
+  font-size: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#fade {
+  background-color: grey;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+#color {
+  background-color: red;
+
+  &:hover {
+    background-color: lightseagreen;
+  }
+}
+
+#shrink {
+  background-color: aqua;
+
+  &:hover {
+    transform: scale(0.7);
+  }
+}
+
+#rotate {
+  background-color: yellow;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+#circle {
+  background-color: purple;
+
+  &:hover {
+    border-radius: 100%;
+  }
+}
+
+#shadow {
+  background-color: brown;
+
+  &:hover {
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+      rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px,
+      rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  }
+}
+
+#swing {
+  background-color: lightgreen;
+
+  &:hover {
+    animation: horizontal-shaking 0.35s ease-in-out;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#border {
+  background-color: black;
+
+  &:hover {
+    border: 2rem solid lightblue;
+  }
+}
+
+#grow {
+  background-color: rgb(249, 120, 221);
+  width: 92vw;
+  height: 20vh;
+  background-color: rgb(255, 0, 140);
+  justify-content: center;
+  border-radius: 1rem;
+
+  &:hover {
+    scale: 10;
+  }
+}
