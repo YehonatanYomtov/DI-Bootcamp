@@ -57,8 +57,6 @@
 
 # print(basket)
 
-
-
 # -------------------
 
 # 🌟 Exercise 4: Floats

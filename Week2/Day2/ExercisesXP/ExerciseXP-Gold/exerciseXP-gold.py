@@ -133,9 +133,34 @@
 
 # Exercise 9 : Random Number
 # Instructions
-# Ask the user to input a number from 1 to 9 (including).
-# Get a random number between 1 and 9. Hint: random module.
-# If the user guesses the correct number print a message that says Winner.
-# If the user guesses the wrong number print a message that says better luck next time.
-# Bonus: use a loop that allows the user to keep guessing until they want to quit.
-# Bonus 2: on exiting the loop tally up and display total games won and lost.
+# 1) Ask the user to input a number from 1 to 9 (including).
+# 2) Get a random number between 1 and 9. Hint: random module.
+# 3) If the user guesses the correct number print a message that says Winner.
+# 4) If the user guesses the wrong number print a message that says better luck next time.
+# ✅ Bonus: use a loop that allows the user to keep guessing until they want to quit.
+# ✅ Bonus 2: on exiting the loop tally up and display total games won and lost.
+
+import random
+
+user_input = ''
+
+games_won = 0
+games_lost = 0
+
+while user_input != "quit" :
+    random_number = random.randint(1, 9)
+
+    print(random_number)
+
+    user_input = input("Please enter a number from 1 to 9 (including): ")
+    if user_input == "quit" :
+        break
+    else :
+        if int(user_input) == random_number :
+            games_won += 1
+            print("Winner 🏆")
+        else :
+            games_lost += 1
+            print("better luck next time.")
+
+print(f"You have won {games_won} game{'s' if games_won == 0 or games_won > 1 else ''} and lost {games_lost} game{'s' if games_lost == 0 or games_lost > 1 else ''}!")
