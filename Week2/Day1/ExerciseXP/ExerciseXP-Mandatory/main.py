@@ -1,7 +1,7 @@
 # ---- Exercise-1 ----
 # Print the following output in one line of code:
 
-# print("Hello World! " *4)
+# print("Hello World!\n" *4)
 
 # ---- Exercise-2 ----
 # Write code that calculates the result of: (99^3)*8 (meaning 99 to the power of 3, times 8).
