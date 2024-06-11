@@ -12,8 +12,9 @@
 # Add
 # my_fav_numbers.update([2,6])
 
-#Remove
-# my_fav_numbers.discard(6)
+# Remove
+# my_fav_numbers.discard(6) # Or -->
+# my_fav_numbers.remove(6) 
 
 # our_fav_numbers = my_fav_numbers.union(my_friends_fav_numbers)
 # our_fav_numbers = my_fav_numbers | my_friends_fav_numbers
