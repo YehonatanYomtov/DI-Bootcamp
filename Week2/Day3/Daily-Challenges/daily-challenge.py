@@ -112,6 +112,8 @@ for k, v in items_purchase.items() :
    else :
       pass
 
+result.sort(key=lambda x: x[1], reverse=True)
+
 # If there isn't enough money in the wallet for any of the items:
 if len(result) == 0 :
    result = 'Nothing'
