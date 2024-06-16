@@ -161,7 +161,6 @@ class Zoo:
       if animal_sold in self.animals:
          self.animals.remove(animal_sold)
       
-   
    def sort_animals(self) -> None:
       self.animals.sort()
       
@@ -181,7 +180,6 @@ class Zoo:
       for group in self.sorted_animals_dict.values():
          print(f"==>>: {group}")
          
-
 my_zoo = Zoo("ramat_gan_safari")
 
 my_zoo.add_animal("Baboon")
