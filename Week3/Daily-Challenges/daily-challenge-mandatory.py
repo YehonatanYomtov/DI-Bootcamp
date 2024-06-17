@@ -18,7 +18,6 @@
 
 #     E-I-E-I-0!
 
-
 # Create the code that is needed to receive the result provided above. Below are a few questions to assist you with your code:
 
 # Create a class called Farm. How should it be implemented?
@@ -28,7 +27,6 @@
 # Test your code and make sure you get the same results as the example above.
 # Bonus: nicely line the text in columns as seen in the example above. Use string formatting.
 
-
 # Expand The Farm
 # Add a method called get_animal_types to the Farm class. This method should return a sorted list of all the animal types (names) in the farm. With the example above, the list should be: ['cow', 'goat', 'sheep'].
 
@@ -36,39 +34,42 @@
 # Note : In English the plural form of the word “sheep” is sheep. But for the purpose of the exercise, let’s say that if there is more than 1 animal, an “s” should be added at the end of the word.
 
 class Farm:
-    def __init__(self, farm_name):
-        self.farm_name = farm_name
-        self.animals = {}
+   def __init__(self, farm_name):
+      self.farm_name = farm_name
+      self.animals = {}
 
-    def add_animal(self, animal, count=1):
-        if animal in self.animals:
-            self.animals[animal] += count
-        else:
-            self.animals[animal] = count
+   def add_animal(self, animal, count=1):
+      if animal in self.animals:
+         self.animals[animal] += count
+      else:
+         self.animals[animal] = count
 
-    def get_info(self):
-        print_farm_name = f"{self.farm_name}'s farm"
-        
-        animals_info = "\n".join(f"{k} : {v}" for k, v in self.animals.items())
-        
-        result = f"""
+   def get_info(self):
+      print_farm_name = f"{self.farm_name}'s farm"
+
+      animals_info = "\n".join(f"{k} : {v}" for k, v in self.animals.items())
+
+      result = f"""
 {print_farm_name}
 
 {animals_info}  
 
 E-I-E-I-O!
 """
-        
-        return result
 
-    def get_animal_types(self):
-        animals_dict_to_list = list(self.animals)
-        sorted_animals_list = sorted(animals_dict_to_list)
+      return result
 
-        return sorted_animals_list
+   def get_animal_types(self):
+      animals_dict_to_list = list(self.animals)
+      sorted_animals_list = sorted(animals_dict_to_list)
 
-    def get_short_info(self):
-        return f"McDonald's farm has cows, goats and sheeps. {self.get_animal_types()}"
+      return sorted_animals_list
+
+   def get_short_info(self):
+      animal_list = self.get_animal_types()
+      pluralized_animal_list = [animal + 's' for animal in animal_list]
+      animals_string = ', '.join(pluralized_animal_list[:-1]) + f' and {pluralized_animal_list[-1]}'
+      return f"{self.farm_name}'s farm has {animals_string}."
 
 macdonald = Farm("McDonald")
 
