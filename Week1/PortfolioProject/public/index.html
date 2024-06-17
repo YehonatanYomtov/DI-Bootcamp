@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="./y.yomtov-icon-pic.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>YYT Portfolio</title>
+    <script src="../src/script.js" defer></script>
+  </head>
+  <body>
+    <div id="trailer"></div>
+    <header>
+      <nav class="flex justify-between items-center">
+        <div id="logo"><a href="#">Logo</a></div>
+
+        <ul id="links-container" class="flex gap-4">
+          <li><a href="#intro-section">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li>
+            <a href="#education-section">Education</a>
+          </li>
+          <li><a href="#certificates-section">Certificates</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro-section" class="section">
+        <div id="img-container">
+          <img src="y.yomtov-pic.jpg" alt="Yehonatan Yomtov" />
+        </div>
+
+        <div id="text-container">
+          <p class="text-base">Full Stack Developer</p>
+          <h1>Yehonatan Yomtov</h1>
+          <article>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
+            tempora aliquam atque, possimus quibusdam eum rerum esse quisquam
+            assumenda eos hic animi laudantium omnis accusantium natus, quo
+            magnam maxime libero!
+          </article>
+        </div>
+      </section>
+
+      <section id="about-section" class="section flex flex-col items-center">
+        <div id="about-header" class="flex flex-col items-center gap-3">
+          <h2>About Me</h2>
+          <hr />
+          <h4>
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology
+          </h4>
+        </div>
+
+        <div id="about-section-bottom-container" class="flex justify-between">
+          <div id="get-to-know-me-section" class="flex flex-col gap-5">
+            <h3>Get to know me!</h3>
+            <article class="w-96">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+              exercitationem iusto alias voluptatem, numquam ad, saepe quisquam
+              iste perspiciatis architecto dolorum consequatur? Ipsam nesciunt,
+              corrupti delectus impedit atque, minus voluptas sunt aperiam sint
+              corporis eveniet fuga dolorem, id consequuntur neque officiis
+              praesentium iste quas perspiciatis est doloremque saepe facere sed
+              reiciendis? Natus rem eligendi quo eos esse neque voluptatibus
+              explicabo adipisci reiciendis sit ad, minus iusto est numquam
+              error excepturi deserunt optio assumenda ducimus voluptatem
+              facilis porro vero nemo! Alias.
+            </article>
+          </div>
+
+          <div id="skills-container" class="flex flex-col gap-7 w-96">
+            <h3>My Skills</h3>
+            <div class="flex flex-wrap gap-4">
+              <div class="skill">Html</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">React</div>
+              <div class="skill">Redux</div>
+              <div class="skill">Bootstrap</div>
+              <div class="skill">TailwindCSS</div>
+              <div class="skill">Materialize</div>
+              <div class="skill">Github</div>
+              <div class="skill">Web Design</div>
+              <div class="skill">Terminal</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects-section"
+        class="section flex flex-col content-between items-center gap-3"
+      >
+        <h2>Projects</h2>
+        <hr />
+
+        <div id="presentation-container" class="flex gap-7 items-center">
+          <div id="presentation-text-container" class="flex flex-col gap-9">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+              consequuntur! Alias dolore iste voluptatibus eveniet aliquam,
+              dolores labore, voluptatem nam tempore corrupti nihil cupiditate
+              culpa sunt exercitationem voluptas deserunt. Doloremque.
+            </p>
+            <button>Check it out</button>
+          </div>
+
+          <div id="presentation-video-container">
+            <div>
+              <video class="video-box" autoplay loop muted>
+                <source src="./Recipe-Project-vid.mp4" type="video/mp4" />
+              </video>
+
+              <div>Recipe Haven</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="education-section"
+        class="section flex flex-col items-center gap-3"
+      >
+        <h2>My Education</h2>
+        <hr />
+
+        <div
+          id="education-cards-container"
+          class="flex flex-wrap justify-center"
+        >
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+
+          <div class="card" name="">
+            <button><a href="#">Visit</a></button>
+
+            <div class="card-bottom">
+              <div>
+                <img src="" alt="" />
+              </div>
+
+              <h5>teachers name</h5>
+              <p>course</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="websites-i-like-container"></div>
+      </section>
+
+      <section id="certificates-section" class="section">
+        <h2>My Certificates</h2>
+      </section>
+
+      <section
+        id="contact-section"
+        class="section flex flex-col items-center gap-3"
+      >
+        <h2>Contact me</h2>
+        <hr />
+
+        <div id="form-and-links-container">
+          <form action="">
+            <div>
+              <label for="">Name</label>
+              <input type="text" placeholder="Enter Your Name" />
+            </div>
+
+            <div>
+              <label for="">Email</label>
+              <input type="email" placeholder="Enter Your Email" />
+            </div>
+
+            <div>
+              <label for="">Message</label>
+              <textarea
+                name=""
+                id=""
+                placeholder="Enter Your Message"
+              ></textarea>
+            </div>
+
+            <button>Submit</button>
+          </form>
+
+          <div class="links-containers"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer><p>© 2024 Yehonatan Yomtov</p></footer>
+  </body>
+</html>

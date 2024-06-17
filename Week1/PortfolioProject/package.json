@@ -1,0 +1,14 @@
+{
+  "name": "portfolioproject",
+  "version": "1.0.0",
+  "description": "a project representing me and my skills",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./public/main.css --watch"
+  },
+  "author": "Yehonatan Yomtov",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
