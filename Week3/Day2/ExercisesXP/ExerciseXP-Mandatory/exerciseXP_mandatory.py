@@ -212,13 +212,17 @@ class TheIncredibles(Family):
         try:
             if self.is_18(family_member):
                 print(f"This is {family_member['name']}'s power: {family_member['power']}")
-        except BaseException as e:
-            if not self.is_18(family_member):
-                print(f"{family_member['name']} is not 18 yet, can't preform their power.")
+            else:
+                raise ValueError(f"{family_member['name']} is not 18 yet, can't perform their power.")
+            
+        except KeyError as e:
+            print(f"Error: Missing key in family member data - {e}")
+            
+        except ValueError as e:
+            print(e)
 
     def incredible_presentation(self):
         self.family_presentation()
-
 
 mark_incredible_family = TheIncredibles(
     [
