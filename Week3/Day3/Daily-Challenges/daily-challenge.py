@@ -11,33 +11,33 @@ class Circle:
             raise ValueError("Either radius or diameter must be provided.")
 
     @property
-    def radius(self):
+    def radius(self) -> float:
         return self._radius
     
     @radius.setter
-    def radius(self, value): 
+    def radius(self, value: Union[int, float]) -> None:
         if value < 0:
             raise ValueError("Radius cannot be negative.")
         self._radius = value
     
     @property
-    def diameter(self):
+    def diameter(self) -> float:
         return self.radius * 2
     
     @property
-    def area(self):
+    def area(self) -> float:
         return math.pi * (self.radius ** 2)
     
-    def __str__(self):
+    def __str__(self) -> str:
         return f"Radius: {self.radius}. Diameter: {self.diameter}"
     
-    def __add__(self, other):
+    def __add__(self, other: 'Circle') -> 'Circle':
         if isinstance(other, Circle):
             return Circle(radius = self.radius + other.radius)
         else:
             raise TypeError("Unsupported operand type(s) for +: 'Circle' and '{type(other).__name__}'")
         
-    def __gt__(self, other):
+    def __gt__(self, other: 'Circle') -> bool:
         if isinstance(other, Circle):
             if self.radius > other.radius:
                 return True
@@ -46,7 +46,7 @@ class Circle:
         else:
             raise TypeError("Unsupported operand type(s) for +: 'Circle' and '{type(other).__name__}'")
         
-    def __eq__(self, other):
+    def __eq__(self, other: 'Circle') -> bool:
         if isinstance(other, Circle):
             if self.radius == other.radius:
                 return True
@@ -55,30 +55,34 @@ class Circle:
         else:
             raise TypeError("Unsupported operand type(s) for +: 'Circle' and '{type(other).__name__}'")
 
-circle1 = Circle(radius = 10)
-circle2 = Circle(diameter = 8)
-circle3 = Circle(diameter = 5)
-circle4 = Circle(radius = 10)
+def main():
+    circle1 = Circle(radius = 10)
+    circle2 = Circle(diameter = 8)
+    circle3 = Circle(diameter = 5)
+    circle4 = Circle(radius = 10)
 
-circles = [circle1, circle2, circle3, circle4]
-sorted_circles = sorted(circles, key = lambda circle: circle.radius)
+    circles = [circle1, circle2, circle3, circle4]
+    sorted_circles = sorted(circles, key = lambda circle: circle.radius)
 
-for circle in sorted_circles:
-    print(circle)
+    for circle in sorted_circles:
+        print(circle)
 
-print(circle1)
-print(circle1 + circle3)
-print(circle1 > circle3)
-print(circle1 == circle4)
+    print(circle1)
+    print(circle1 + circle3)
+    print(circle1 > circle3)
+    print(circle1 == circle4)
 
-import turtle
-    
-turtle.speed(1)
+    import turtle
+        
+    turtle.speed(1)
 
-for circle in sorted_circles:
-    turtle.circle(circle.radius)
-    turtle.penup()
-    turtle.forward(circle.radius * 2)
-    turtle.pendown()
-    
-turtle.done()
+    for circle in sorted_circles:
+        turtle.circle(circle.radius)
+        turtle.penup()
+        turtle.forward(circle.radius * 2)
+        turtle.pendown()
+        
+    turtle.done()
+
+if __name__ == "__main__":
+    main()

@@ -44,70 +44,70 @@
 # # >>> c1 + c3
 # # TypeError: Cannot add between Currency type <dollar> and <shekel>
 
-# from typing import Union
+from typing import Union
 
-# class Currency:
-#     def __init__(self, currency, amount) -> None:
-#         self.currency = currency
-#         self.amount = amount
+class Currency:
+    def __init__(self, currency, amount) -> None:
+        self.currency = currency
+        self.amount = amount
 
-#     # Takes the instance of the class and turns it into a readable string (equivalent to the str() method)
-#     def __str__(self) -> str:
-#         return f"{self.amount} {self.currency}"
+    # Takes the instance of the class and turns it into a readable string (equivalent to the str() method)
+    def __str__(self) -> str:
+        return f"{self.amount} {self.currency}"
 
-#     # equivalent to the int() method
-#     def __int__(self) -> int:
-#         return self.amount
+    # equivalent to the int() method
+    def __int__(self) -> int:
+        return self.amount
 
-#     # Same output as __str__, although __repr__ is to display the data to a developer, while __str__ is to display the instance of the class to the user. 
-#     def __repr__(self) -> str:
-#         return f"{self.amount} {self.currency}"
+    # Same output as __str__, although __repr__ is to display the data to a developer, while __str__ is to display the instance of the class to the user. 
+    def __repr__(self) -> str:
+        return f"{self.amount} {self.currency}"
 
-#     # equivalent to + operator
-#     def __add__(self, other: Union[int, "Currency"]) -> int:
-#         if isinstance(other, Currency):
-#             if self.currency == other.currency:
-#                 return self.amount + other.amount
-#             else:
-#                 raise ValueError("The currency's are not the same, cant add on to the other.")
-#         elif isinstance(other, int):
-#             return self.amount + other
-#         else:
-#             raise TypeError("Unsupported type for addition.")
+    # equivalent to + operator
+    def __add__(self, other: Union[int, "Currency"]) -> int:
+        if isinstance(other, Currency):
+            if self.currency == other.currency:
+                return self.amount + other.amount
+            else:
+                raise ValueError("The currency's are not the same, cant add on to the other.")
+        elif isinstance(other, int):
+            return self.amount + other
+        else:
+            raise TypeError("Unsupported type for addition.")
 
-#     # equivalent to the += operator
-#     def __iadd__(self, other:  Union[int, "Currency"]) -> "Currency":
-#         if isinstance(other, Currency):
-#             if self.currency == other.currency:
-#                 self.amount += other.amount
-#             else:
-#                 raise ValueError("Currencies are not the same, cannot add.")
-#         elif isinstance(other, int):
-#             self.amount += other
-#         else:
-#             raise TypeError("Unsupported type for in-place addition.")
-#         return self
+    # equivalent to the += operator
+    def __iadd__(self, other:  Union[int, "Currency"]) -> "Currency":
+        if isinstance(other, Currency):
+            if self.currency == other.currency:
+                self.amount += other.amount
+            else:
+                raise ValueError("Currencies are not the same, cannot add.")
+        elif isinstance(other, int):
+            self.amount += other
+        else:
+            raise TypeError("Unsupported type for in-place addition.")
+        return self
 
-# c1 = Currency('dollar', 5)
-# c2 = Currency('dollar', 10)
-# c3 = Currency('shekel', 1)
-# c4 = Currency('shekel', 10)
+c1 = Currency('dollar', 5)
+c2 = Currency('dollar', 10)
+c3 = Currency('shekel', 1)
+c4 = Currency('shekel', 10)
 
-# print(c1)
-# print(int(c1))
-# print(repr(c1))
+print(c1)
+print(int(c1))
+print(repr(c1))
 
-# print(c1 + 5)
-# print(c1 + c2)
+print(c1 + 5)
+print(c1 + c2)
 
-# print(c1)
+print(c1)
 
-# c1 += 5
-# print(c1)
-# c1 += c2
-# print(c1)
-# c1 + c3
-# print(c1)
+c1 += 5
+print(c1)
+c1 += c2
+print(c1)
+c1 + c3
+print(c1)
 
 # --------------------
 
