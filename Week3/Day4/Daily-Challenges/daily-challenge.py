@@ -67,7 +67,6 @@ class Text:
         unique_words = list(set(words))
         
         return unique_words
-    
     def without_punctuation(self):
         translation_table = str.maketrans('', '', self.string.punctuation)
         
@@ -95,8 +94,8 @@ class Text:
         with open(file_location, mode = 'r') as file:
             data = file.read()
             return cls(data).string
-   
-   
+
+
 def main() -> None:
     text1 = Text("A good book would sometimes cost as much as a good house.")
     print(text1.word_frequency("as"))
@@ -108,4 +107,4 @@ def main() -> None:
     # print(text2)
 
 if __name__ == "__main__":
-    main() 
+    main()     
