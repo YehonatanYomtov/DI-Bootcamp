@@ -50,15 +50,15 @@ where title ilike 'lo%';
 
 -- 10) Write a query which will find the 10 cheapest movies.
 select * 
-from payment
-order by amount asc
+from film
+order by rental_rate asc
 limit 10;
 
 -- 11) Not satisfied with the results. Write a query which will find the next 10 cheapest movies.
 -- Bonus: Try to not use LIMIT.
 select * 
-from payment
-order by amount asc
+from film
+order by rental_rate asc
 offset 10
 fetch next 10 rows only;
 
@@ -87,6 +87,7 @@ from payment p
 inner join customer c on c.customer_id = p.customer_id
 inner join staff s on s.staff_id = p.staff_id
 order by s.staff_id;
+
 
 
 
