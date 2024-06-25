@@ -48,7 +48,7 @@
 --     SELECT COUNT(*) 
 --     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
 
---> A:  3 (donsen't count the null id)
+-- > A:  0 (doesn't count the null since it is an empty space in memory)
 
 
 -- Q2. What will be the OUTPUT of the following statement?
@@ -56,7 +56,7 @@
 --     SELECT COUNT(*) 
 --     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id = 5 )
 
---> A:  3 (donsen't count the id that = to 5)
+--> A:  3 (doesn't count the id that = to 5)
 
 
 -- Q3. What will be the OUTPUT of the following statement?
@@ -64,7 +64,7 @@
 --     SELECT COUNT(*) 
 --     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab )
 
---> A: 2 (donsen't count the id that = to 5 or the id that - to null)
+--> A: 0 (since null is unknown)
 
 
 -- Q4. What will be the OUTPUT of the following statement?
@@ -72,4 +72,4 @@
 --     SELECT COUNT(*) 
 --     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NOT NULL )
 
---> A: 3 (donsen't count the id that != to null which is 5, therfor the id = 5 won't be counted)
+--> A: 3 (doesn't count the id that != to null which is 5, therefor the id = 5 won't be counted)
