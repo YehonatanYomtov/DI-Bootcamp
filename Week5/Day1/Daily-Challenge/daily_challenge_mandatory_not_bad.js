@@ -1,4 +1,4 @@
-Instructions;
+// Instructions;
 // 1) Create a variable called sentence. The value of the variable should be a string that contains the words “not” and “bad”.
 // For example, “The movie is not that bad, I like it”.
 
