@@ -8,7 +8,9 @@
 // you will transform it to : ["Hello", "World", "in", "a", "frame"]
 // that will get displayed as:
 
-const userInput = "Hello, World, in, a, frame";
+const userInput = prompt(
+  "Enter a sentence where each word is separated by a space and comma: "
+);
 const toArr = userInput.split(", ");
 
 let string = "";
