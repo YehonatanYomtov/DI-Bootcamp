@@ -58,41 +58,29 @@
 //   "Neptune",
 // ];
 
-var planetsWithMoons = [
-  { name: "Mercury", moon: null },
-  { name: "Venus", moon: null },
-  { name: "Earth", moon: "Moon" },
-  { name: "Mars", moon: "Phobos" },
-  { name: "Jupiter", moon: "Ganymede" },
-  { name: "Saturn", moon: "Titan" },
-  { name: "Uranus", moon: "Titania" },
-  { name: "Neptune", moon: "Triton" },
-];
-
-const planetColors = [
-  "gray",
-  "yellow",
-  "blue",
-  "red",
-  "orange",
-  "gold",
-  "lightblue",
-  "darkblue",
+const planetsWithMoons = [
+  { name: "Mercury", moons: 0, color: "gray" },
+  { name: "Venus", moons: 0, color: "yellow" },
+  { name: "Earth", moons: 1, color: "blue" },
+  { name: "Mars", moons: 2, color: "red" },
+  { name: "Jupiter", moons: 79, color: "orange" },
+  { name: "Saturn", moons: 82, color: "gold" },
+  { name: "Uranus", moons: 27, color: "lightblue" },
+  { name: "Neptune", moons: 14, color: "darkblue" },
 ];
 
 const listPlanetsSection = document.querySelector(".listPlanets");
 
-for (var i = 0; i < planetsWithMoons.length; i++) {
+for (let i = 0; i < planetsWithMoons.length; i++) {
   const planet = document.createElement("div");
   planet.setAttribute("class", "planet");
-  planet.style.backgroundColor = `${planetColors[i]}`;
+  planet.style.backgroundColor = `${planetsWithMoons[i].color}`;
 
-  if (planetsWithMoons[i].moon) {
+  for (let j = 0; j < planetsWithMoons[i].moons; j++) {
     const moon = document.createElement("div");
-    moon.setAttribute("class", "moon");
-    moon.style.backgroundColor = "light-grey";
-
-    planet.append(moon);
+    moon.classList.add("moon");
+    planet.appendChild(moon);
+    moon.style.left = `${110 + j * 40}px`;
   }
 
   listPlanetsSection.append(planet);
