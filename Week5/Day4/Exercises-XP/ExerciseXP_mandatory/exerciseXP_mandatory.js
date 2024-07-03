@@ -126,12 +126,16 @@
 //   console.log(firstNameValue);
 //   console.log(lastNameValue);
 
-//   const ul = document.querySelector("ul");
+//   if (firstNameValue === "" || lastNameValue === "") {
+//     return;
+//   } else {
+//     const ul = document.querySelector("ul");
 
-//   for (let i = 0; i < [firstNameValue, lastNameValue].length; i++) {
-//     const li = document.createElement("li");
-//     li.textContent = [firstNameValue, lastNameValue][i];
-//     ul.append(li);
+//     for (let i = 0; i < [firstNameValue, lastNameValue].length; i++) {
+//       const li = document.createElement("li");
+//       li.textContent = [firstNameValue, lastNameValue][i];
+//       ul.append(li);
+//     }
 //   }
 // });
 
