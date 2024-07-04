@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(
+    0deg,
+    rgba(252, 65, 125, 1) 0%,
+    rgba(252, 47, 61, 1) 100%
+  );
+
+  h1 {
+    color: white;
+    margin-top: 3rem;
+  }
+
+  form {
+    display: flex;
+    input {
+      width: 25rem;
+      padding: 1rem 0.7rem;
+      font-size: 1.35rem;
+      border: none;
+    }
+
+    button {
+      padding: 0 1rem;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      color: rgb(91, 190, 223);
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    button:hover {
+      background-color: rgb(249, 249, 249);
+    }
+  }
+
+  .listTasks {
+    position: relative;
+    background-color: white;
+    width: 30rem;
+    min-height: 20rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    li {
+      list-style-type: none;
+      display: flex;
+      gap: 0.7rem;
+      border-bottom: 1.5px solid rgb(0, 153, 255);
+      padding-bottom: 0.8rem;
+
+      button {
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: #fc3140;
+        border: none;
+        cursor: pointer;
+
+        i {
+          color: white;
+        }
+      }
+
+      input {
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 1.4rem;
+        color: grey;
+        cursor: pointer;
+      }
+
+      .done {
+        text-decoration: line-through;
+        text-decoration-color: #fc3140;
+        color: #fc3140;
+      }
+    }
+
+    .clear-tasks-btn {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      border: none;
+      cursor: pointer;
+      padding: 0.2rem;
+      background-color: transparent;
+      font-size: 1.2rem;
+      color: #fc3140;
+    }
+  }
+}
