@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./pexels-doubleseven-736355.jpg");
+  background-size: cover;
+  background-position: center;
+
+  #drum-set {
+    display: flex;
+    gap: 2rem;
+    background-color: transparent;
+
+    .drum {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      gap: 0.5rem;
+      height: 7rem;
+      width: 7rem;
+      border: 3px solid rgb(210, 244, 255);
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.384);
+
+      h4 {
+        color: white;
+        font-weight: 500;
+        font-size: 2.5rem;
+      }
+
+      p {
+        color: rgb(0, 242, 255);
+        font-size: 1.5rem;
+      }
+    }
+
+    .drum:hover,
+    .pressed {
+      background-color: transparent;
+      scale: 1.2;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 54px 55px,
+        rgba(166, 233, 255, 0.7) 0px -12px 30px,
+        rgba(166, 233, 255, 0.7) 0px 4px 10px,
+        rgba(166, 233, 255, 0.7) 0px 12px 13px,
+        rgba(166, 233, 255, 0.7) 0px -3px 10px;
+    }
+  }
+}
