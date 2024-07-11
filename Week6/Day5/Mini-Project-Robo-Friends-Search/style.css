@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chakra Petch";
+}
+
+header {
+  background-color: #5ee873;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  #logo {
+    font-family: "SEGA LOGO FONT", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  input {
+    width: 35rem;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgb(229, 229, 229);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    font-size: 1.1rem;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 10rem;
+  background-color: #5643c2;
+  background-image: url("images/image1.png");
+
+  #card-display-container {
+    display: grid;
+    grid-template-columns: repeat(3, 21rem);
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #4cd2d6;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-image: url("images/card-pattern.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      scale: 1.02;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      div {
+        background-color: #2a2160;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+
+    div {
+      background-color: #393e4f;
+      border-radius: 100%;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: all 0.4s;
+    }
+
+    h4 {
+      align-self: start;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-top: -0.8rem;
+      align-self: start;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  main {
+    #card-display-container {
+      grid-template-columns: repeat(4, 21rem);
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    #card-display-container {
+      grid-template-columns: repeat(2, 21rem);
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    #card-display-container {
+      grid-template-columns: repeat(1, 21rem);
+    }
+  }
+}
