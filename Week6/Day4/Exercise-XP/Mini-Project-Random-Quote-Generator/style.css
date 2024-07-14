@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Architects Daughter";
+  letter-spacing: 0.08rem;
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-color: #272929;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  h1,
+  h3,
+  h2 {
+    color: white;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    position: relative;
+    font-size: 2.2rem;
+    color: rgb(0, 225, 180);
+    margin: 10rem 0 3rem 0;
+  }
+
+  h2::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3rem;
+    border: 1px solid rgb(0, 225, 180);
+    border-radius: 1rem;
+  }
+
+  input {
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    width: 15rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  button {
+    border: 1px solid rgb(0, 132, 255);
+    border-radius: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: transparent;
+    color: rgb(0, 132, 255);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  button:hover {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    box-shadow: rgba(0, 132, 255, 0.512) 0px 3px 15px;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-self: start;
+    font-size: 15rem;
+    color: rgba(255, 255, 255, 0.064);
+    z-index: 1;
+  }
+
+  .quote-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 3rem;
+    margin: 3rem;
+  }
+
+  .quote-display {
+    width: 35rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 2;
+  }
+
+  .author-display {
+    color: rgb(0, 225, 180);
+    font-size: 1.3rem;
+    z-index: 2;
+  }
+
+  #generate-btn {
+    color: rgb(0, 182, 0);
+    border: 2px solid rgb(0, 182, 0);
+
+    &:hover {
+      background-color: rgb(0, 182, 0);
+      color: white;
+      box-shadow: rgba(0, 182, 0, 0.507) 0px 5px 15px;
+    }
+  }
+
+  #quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    min-height: 15rem;
+    width: 40rem;
+    border: 2px solid rgb(153, 153, 153);
+    border-radius: 1rem;
+  }
+
+  #info-btns-container {
+    position: relative;
+    left: -15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    button {
+      width: fit-content;
+    }
+
+    p {
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    #like-btn {
+      color: rgb(208, 1, 88);
+      border: 2px solid rgb(208, 1, 88);
+
+      &:hover {
+        background-color: rgb(208, 1, 88);
+        color: white;
+        box-shadow: rgba(208, 1, 87, 0.505) 0px 5px 15px;
+      }
+    }
+  }
+
+  #create-quote-section {
+    #create-quote-form {
+      display: flex;
+      gap: 1rem;
+    }
+
+    button {
+      color: rgb(208, 208, 1);
+      border: 2px solid rgb(208, 208, 1);
+
+      &:hover {
+        background-color: rgb(185, 185, 0);
+        color: white;
+        box-shadow: rgba(208, 208, 1, 0.513) 0px 5px 15px;
+      }
+    }
+  }
+
+  #filter-quote-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #filter-quote-form {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+
+      button {
+        color: rgb(0, 182, 0);
+        border: 2px solid rgb(0, 182, 0);
+
+        &:hover {
+          background-color: rgb(0, 182, 0);
+          color: white;
+          box-shadow: rgba(0, 182, 0, 0.507) 0px 5px 15px;
+        }
+      }
+    }
+
+    #filter-quote-display-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 4rem;
+
+      .author-display {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #search-all-quotes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+
+    #last-section-quote-display {
+      .author-display {
+        margin: 1rem 0;
+        text-align: center;
+      }
+    }
+
+    #search-all-quotes-input-container {
+      display: flex;
+      gap: 1rem;
+
+      input {
+        width: 35rem;
+      }
+
+      button {
+        color: rgb(0, 182, 0);
+        border: 2px solid rgb(0, 182, 0);
+
+        &:hover {
+          background-color: rgb(0, 182, 0);
+          color: white;
+          box-shadow: rgba(0, 182, 0, 0.507) 0px 5px 15px;
+        }
+      }
+    }
+
+    #pre-next-btn-section {
+      display: flex;
+      gap: 2rem;
+      align-self: center;
+      margin-top: 2rem;
+
+      #Previous-btn {
+        color: rgb(208, 1, 88);
+        border: 2px solid rgb(208, 1, 88);
+
+        &:hover {
+          background-color: rgb(208, 1, 88);
+          color: white;
+          box-shadow: rgba(208, 1, 87, 0.505) 0px 5px 15px;
+        }
+      }
+    }
+  }
+}

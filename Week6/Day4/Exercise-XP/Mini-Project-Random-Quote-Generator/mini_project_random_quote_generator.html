@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script
+      src="./mini_project_random_quote_generator.js"
+      type="module"
+      defer
+    ></script>
+    <title>Mini Project - Random Quote Generator</title>
+  </head>
+  <body>
+    <h1>My quotes</h1>
+    <h3>Motivational, inspiration and more !</h3>
+
+    <h2>Generate quote</h2>
+
+    <button id="generate-btn">Generate Quote</button>
+
+    <section id="generated-quote-section"></section>
+
+    <section id="info-btns-container">
+      <button id="char-in-quote-btn">characters in quote</button>
+      <p id="char-in-quote-display"></p>
+
+      <button id="char-in-quote-no-spaces-btn">
+        characters in quote (No spaces)
+      </button>
+      <p id="char-in-quote-no-spaces-display"></p>
+
+      <button id="words-in-quote-btn">words in quote</button>
+      <p id="words-in-quote-display"></p>
+
+      <button id="like-btn">Like quote</button>
+    </section>
+
+    <h2>Create quote</h2>
+
+    <section id="create-quote-section">
+      <form id="create-quote-form">
+        <input
+          type="text"
+          name="quote"
+          id="quote-input"
+          placeholder="Enter quote..."
+        />
+
+        <input
+          type="text"
+          name="author"
+          id="author-input"
+          placeholder="Enter author name..."
+        />
+
+        <button>Add</button>
+      </form>
+    </section>
+
+    <section id="filter-quote-section">
+      <h2>Search Quotes by Author</h2>
+
+      <form id="filter-quote-form">
+        <input
+          type="search"
+          id="search-by-author-input"
+          placeholder="Search quotes by Author..."
+        />
+        <button>Search</button>
+      </form>
+
+      <div id="filter-quote-display-section"></div>
+    </section>
+
+    <section id="search-all-quotes-section">
+      <h2>Search all Quotes</h2>
+
+      <div id="last-section-quote-display"></div>
+
+      <div id="search-all-quotes-input-container">
+        <input type="number" id="search-all-quotes-input" />
+        <button id="search-all-quotes-btn">Search</button>
+      </div>
+
+      <div id="pre-next-btn-section">
+        <button id="Previous-btn">← Previous</button>
+        <button id="Next-btn">Next →</button>
+      </div>
+    </section>
+  </body>
+</html>
