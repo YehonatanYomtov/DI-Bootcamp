@@ -1,0 +1,152 @@
+:root {
+  --clr-green: rgb(0, 215, 0);
+  --clr-red: rgb(255, 65, 65);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.02rem;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem;
+  background-color: #20405b;
+
+  button {
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  #search-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    input {
+      width: 30rem;
+      border: none;
+      border-radius: 0.8rem;
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    input::placeholder {
+      color: rgb(0, 183, 0);
+    }
+
+    input,
+    button {
+      border: 2px solid var(--clr-green);
+      color: var(--clr-green);
+      background-color: transparent;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 215, 0, 0.107);
+        color: rgb(0, 255, 0);
+        border: 2px solid rgb(0, 255, 0);
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s;
+      -webkit-text-fill-color: #fff !important;
+    }
+
+    input:focus {
+      background-color: #162e41;
+    }
+
+    button {
+      border-radius: 100%;
+      padding: 0;
+      font-size: 1.3rem;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  #gifs-display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .gif {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      img {
+        border-radius: 1rem;
+        width: 20rem;
+      }
+
+      .delete-btn {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        border: 1px solid white;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.154);
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        i {
+          color: white;
+          font-size: 1.1rem;
+          transition: all 0.1s;
+        }
+
+        &:hover {
+          background-color: rgba(138, 30, 30, 0.327);
+          border: 2px dashed var(--clr-red);
+
+          i {
+            color: var(--clr-red);
+            scale: 1.2;
+          }
+        }
+      }
+    }
+  }
+
+  #delete-all-btn {
+    border: 2px solid var(--clr-red);
+    background-color: transparent;
+    color: var(--clr-red);
+    transition: all 0.2s;
+    letter-spacing: 0.07rem;
+
+    &:hover {
+      color: white;
+      background-color: var(--clr-red);
+    }
+  }
+}
+
+.none {
+  display: none;
+}
