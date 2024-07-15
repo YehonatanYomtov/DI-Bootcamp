@@ -190,11 +190,15 @@ const morse = `{
       ")": "-.--.-"
     }`;
 
+const userInput = prompt("Enter a valid character: ")
+  .replace(/\s/g, "")
+  .toLowerCase();
+
 function toJs(jsonString) {
   const toJsObj = JSON.parse(jsonString);
 
   return new Promise((res, rej) => {
-    if (Object.keys(toJsObj).length === 0) {
+    if (Object.keys(toJsObj).length === 0 || !toJsObj) {
       rej("Your Morse code object is empty!");
     } else {
       res(toJsObj);
@@ -203,10 +207,6 @@ function toJs(jsonString) {
 }
 
 function toMorse(morseJS) {
-  const userInput = prompt("Enter a valid character: ")
-    .replace(/\s/g, "")
-    .toLowerCase();
-
   const inputToArray = userInput.split("");
   const keys = Object.keys(morseJS);
 
@@ -222,6 +222,7 @@ function toMorse(morseJS) {
 
 function joinWords(morseTranslation) {
   const displayMorseContainer = document.getElementById("display-morse");
+  document.querySelector("h3").textContent = `${userInput} in morse is:`;
   displayMorseContainer.innerHTML = morseTranslation.join("<br>");
 }
 
