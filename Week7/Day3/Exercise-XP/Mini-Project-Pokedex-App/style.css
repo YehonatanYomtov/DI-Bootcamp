@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-image: url("./images/pokemon-bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.52);
+  }
+
+  header {
+    z-index: 99;
+
+    img {
+      width: 30rem;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    z-index: 99;
+
+    .gameboy {
+      position: relative;
+      height: 48rem;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.6rem;
+      border-radius: 1.5rem 1.5rem 1.5rem 3.5rem;
+      background-color: rgb(240, 204, 0);
+      background: linear-gradient(
+        144deg,
+        rgb(227, 193, 0) 0%,
+        rgb(255, 238, 142) 29%,
+        rgb(227, 193, 0) 94%
+      );
+
+      box-shadow: rgb(196, 161, 5) 11px 8px 0px 0px,
+        rgb(212, 175, 6) -2px -2px 25px 5px inset,
+        rgb(221, 181, 5) -2px 2px 25px 5px inset,
+        rgb(221, 181, 5) 2px -2px 25px 5px inset;
+    }
+
+    .screen-container {
+      position: relative;
+      height: 56%;
+      width: 100%;
+      border: 1px solid rgb(95, 95, 95);
+      border-radius: 1rem;
+      background: white;
+      background: linear-gradient(
+        144deg,
+        rgb(120, 120, 120) 0%,
+        rgb(203, 203, 203) 80%,
+        rgb(120, 120, 120) 94%
+      );
+      padding-bottom: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.18) 1px 1px 1px inset,
+        rgba(0, 0, 0, 0.18) -1px -1px 1px inset,
+        rgba(0, 0, 0, 0.18) -1px 1px 1px inset,
+        rgba(0, 0, 0, 0.18) 1px -1px 1px inset;
+
+      .on-screen {
+        background: linear-gradient(
+          144deg,
+          rgb(198, 195, 161) 0%,
+          rgba(255, 255, 255, 0.647) 49%,
+          rgb(198, 195, 161) 94%
+        ) !important;
+      }
+
+      .screen {
+        position: absolute;
+        height: 80%;
+        width: 90%;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.8rem;
+        background: linear-gradient(
+          144deg,
+          rgb(113, 112, 92) 0%,
+          rgba(255, 255, 255, 0.647) 49%,
+          rgb(113, 112, 92) 94%
+        );
+        box-shadow: rgba(0, 0, 0, 0.28) 2px 2px 3px inset,
+          rgba(0, 0, 0, 0.28) -2px -2px 3px inset,
+          rgba(0, 0, 0, 0.28) -2px 2px 3px inset,
+          rgba(0, 0, 0, 0.28) 2px -2px 3px inset;
+        border-radius: 1rem;
+
+        #instructions-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        #into-animation {
+          opacity: 0;
+          animation: 2.5s toFocus forwards;
+          font-size: 2rem;
+        }
+
+        img {
+          position: relative;
+          top: 1rem;
+          width: 15rem;
+        }
+
+        .info-box {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0.8rem;
+          border: 3px double black;
+          border-radius: 0.5rem;
+
+          h3 {
+            position: relative;
+            align-self: center;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+          }
+
+          h3::after {
+            content: "";
+            position: absolute;
+            bottom: -0.2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 0.1rem;
+            width: 3rem;
+            background-color: rgb(60, 60, 60);
+          }
+
+          p {
+            font-weight: bold;
+
+            span {
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .logo {
+        position: absolute;
+        bottom: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-wrap: nowrap;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        span {
+          color: red;
+          font-style: italic;
+          font-weight: 400;
+          letter-spacing: 0.04rem;
+        }
+      }
+    }
+
+    .controllers-section {
+      position: relative;
+      height: 50%;
+      width: 100%;
+    }
+
+    #sub-logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: rgb(145, 123, 0);
+      padding: 0.05rem 0.7rem;
+      border: 1px solid rgb(145, 123, 0);
+      border-radius: 1rem;
+      box-shadow: rgba(151, 129, 0, 0.74) -1.5px -1.5px 5px inset;
+
+      span {
+        font-size: 1.5rem;
+      }
+    }
+
+    .arrows {
+      position: absolute;
+      top: 4rem;
+      left: 1.5rem;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 1.5rem;
+      background: linear-gradient(
+        114deg,
+        rgb(238, 200, 12) 0%,
+        rgb(207, 181, 36) 80%
+      );
+      box-shadow: rgba(0, 0, 0, 0.18) 1.5px 1.5px 1.5px inset,
+        rgba(0, 0, 0, 0.18) -1.5px -1.5px 1.5px inset,
+        rgba(0, 0, 0, 0.18) -1.5px 1.5px 1.5px inset,
+        rgba(0, 0, 0, 0.18) 1.5px -1.5px 1.5px inset;
+
+      .left-arrow,
+      .right-arrow {
+        position: relative;
+        height: 2rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+        cursor: pointer;
+        border-radius: 0.7rem;
+        background: linear-gradient(
+          144deg,
+          rgb(155, 155, 155) 0%,
+          rgb(185, 185, 185) 80%,
+          rgb(155, 155, 155) 94%
+        );
+        box-shadow: rgb(86, 86, 86) 1.5px 3px,
+          rgba(0, 0, 0, 0.096) -1px -1px 10px 3px inset,
+          rgba(0, 0, 0, 0.096) -1px 1px 10px 3px inset,
+          rgba(0, 0, 0, 0.096) 1px -1px 10px 3px inset;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+
+      .right-arrow {
+        i {
+          position: absolute;
+          right: 0.8rem;
+        }
+      }
+    }
+
+    #green-btn-container {
+      position: absolute;
+      top: 2.5rem;
+      right: 2rem;
+      height: 7rem;
+      width: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      background: linear-gradient(
+        114deg,
+        rgb(220, 205, 74) 0%,
+        rgb(200, 182, 39) 61%
+      );
+      box-shadow: rgba(0, 0, 0, 0.18) 1.5px 2px 1.5px inset,
+        rgba(0, 0, 0, 0.18) -1.5px -2px 1.5px inset,
+        rgba(0, 0, 0, 0.18) -1.5px 2px 1.5px inset,
+        rgba(0, 0, 0, 0.18) 1.5px -2px 1.5px inset;
+
+      #green-btn {
+        height: 5rem;
+        width: 5rem;
+        border-radius: 100%;
+        cursor: pointer;
+        background-color: rgb(87, 192, 60);
+        background: linear-gradient(
+          144deg,
+          rgb(87, 192, 60) 0%,
+          rgb(134, 221, 112) 59%,
+          rgb(87, 192, 60) 94%
+        );
+        box-shadow: rgb(45, 101, 31) 1.5px 1.5px 2px 2px,
+          rgba(0, 0, 0, 0.05) -1px -1px 5px 2px inset,
+          rgba(0, 0, 0, 0.05) -1px 1px 5px 2px inset,
+          rgba(0, 0, 0, 0.05) 1px -1px 5px 2px inset;
+      }
+    }
+
+    .speaker {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      height: 7rem;
+      width: 7rem;
+      border-radius: 100%;
+      box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 12px 2px inset,
+        rgba(0, 0, 0, 0.05) -1px -1px 12px 2px inset,
+        rgba(0, 0, 0, 0.05) -1px 1px 12px 2px inset,
+        rgba(0, 0, 0, 0.05) 1px -1px 12px 2px inset;
+
+      .speaker-hole {
+        position: absolute;
+        height: 0.65rem;
+        width: 0.65rem;
+        border-radius: 100%;
+        background-color: rgb(49, 49, 49);
+      }
+
+      .one {
+        top: 0.7rem;
+        right: 3.15rem;
+      }
+
+      .two {
+        top: 1.4rem;
+        right: 1.4rem;
+      }
+
+      .three {
+        top: 3.15rem;
+        right: 0.7rem;
+      }
+
+      .four {
+        bottom: 1.4rem;
+        right: 1.4rem;
+      }
+
+      .five {
+        bottom: 0.7rem;
+        right: 3.15rem;
+      }
+
+      .six {
+        bottom: 1.4rem;
+        left: 1.4rem;
+      }
+
+      .seven {
+        top: 3.15rem;
+        left: 0.7rem;
+      }
+
+      .eight {
+        top: 1.4rem;
+        left: 1.4rem;
+      }
+
+      .nine {
+        top: 2.03rem;
+        left: 3.15rem;
+      }
+
+      .ten {
+        bottom: 1.89rem;
+        left: 3.15rem;
+      }
+
+      .eleven {
+        top: 3.15rem;
+        left: 1.96rem;
+      }
+
+      .twelve {
+        top: 3.15rem;
+        right: 1.89rem;
+      }
+
+      .thirteen {
+        top: 3.15rem;
+        right: 3.15rem;
+      }
+    }
+  }
+
+  .on-off-container {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    .on-off-light {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 100%;
+      background-color: rgb(86, 0, 0);
+      box-shadow: rgba(0, 0, 0, 0.28) -2px -2px 3px inset;
+    }
+
+    .on {
+      background-color: rgb(255, 0, 0);
+    }
+
+    p {
+      padding-top: 0.1rem;
+      font-size: 1rem;
+    }
+
+    .on-off-btn {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 100%;
+      background-color: rgb(85, 85, 85);
+      cursor: pointer;
+      box-shadow: rgb(144, 144, 144) 1px 2px;
+
+      i {
+        color: white;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@keyframes toFocus {
+  to {
+    opacity: 1;
+  }
+}

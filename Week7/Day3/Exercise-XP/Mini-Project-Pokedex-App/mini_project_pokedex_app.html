@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="mini_project_pokedex_app.js" defer></script>
+    <title>Pokedex App</title>
+  </head>
+  <body>
+    <header>
+      <img src="images//pokemon-header.png" alt="Pokemon Header" />
+    </header>
+
+    <main>
+      <div class="gameboy">
+        <div class="screen-container">
+          <audio id="my-audio">
+            <source src="audio/videoplayback.webm" type="audio/webm" />
+          </audio>
+
+          <div id="pokemon-info-display-canvas" class="screen"></div>
+          <div class="logo">GameBoy <span>Project</span></div>
+        </div>
+
+        <div class="controllers-section">
+          <div id="sub-logo">Yomtov <span>©</span></div>
+
+          <div class="arrows">
+            <div class="left-arrow previous">
+              <i class="fa-solid fa-caret-left"></i>
+            </div>
+
+            <div class="right-arrow next">
+              <i class="fa-solid fa-caret-right"></i>
+            </div>
+          </div>
+
+          <div id="green-btn-container">
+            <div id="green-btn"></div>
+          </div>
+        </div>
+
+        <div class="speaker">
+          <div class="speaker-hole one"></div>
+          <div class="speaker-hole two"></div>
+          <div class="speaker-hole three"></div>
+          <div class="speaker-hole four"></div>
+          <div class="speaker-hole five"></div>
+          <div class="speaker-hole six"></div>
+          <div class="speaker-hole seven"></div>
+          <div class="speaker-hole eight"></div>
+          <div class="speaker-hole nine"></div>
+          <div class="speaker-hole ten"></div>
+          <div class="speaker-hole eleven"></div>
+          <div class="speaker-hole twelve"></div>
+          <div class="speaker-hole thirteen"></div>
+        </div>
+
+        <div class="on-off-container">
+          <div class="on-off-light"></div>
+          <p>On/Off</p>
+
+          <button class="on-off-btn">
+            <i class="fa-solid fa-power-off"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
