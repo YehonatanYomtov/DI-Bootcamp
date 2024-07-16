@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="daily_challenge_currency_converter.js" defer></script>
+    <title>Daily Challenge: Currency Converter</title>
+  </head>
+  <body>
+    <div id="main-container">
+      <h1>Currency Converter</h1>
+
+      <form id="currency-form">
+        <label for="fromCur">From:</label>
+        <select name="fromCur" id="from-cur"></select>
+
+        <label for="toCur">To:</label>
+        <select name="toCur" id="to-cur"></select>
+
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          placeholder="Amount..."
+        />
+
+        <button>Convert</button>
+      </form>
+
+      <button id="switch-currencies-btn">Switch</button>
+
+      <div id="conversion-display"></div>
+    </div>
+  </body>
+</html>
