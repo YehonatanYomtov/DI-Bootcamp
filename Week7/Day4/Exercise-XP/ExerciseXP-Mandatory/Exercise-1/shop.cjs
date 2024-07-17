@@ -1,4 +1,4 @@
-const { products } = require("./products");
+const { products } = require("./products.cjs");
 
 function findProduct(productName) {
   return products.filter(
