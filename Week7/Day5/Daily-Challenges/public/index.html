@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Daily Challenge: Emoji Guessing Game</title>
+  </head>
+  <body>
+    <section id="start-up-section">
+      <h1>Game setup:</h1>
+      <form onsubmit="createGame(event)">
+        <input
+          type="text"
+          placeholder="Enter your name..."
+          name="name"
+          required
+        />
+        <label for="">Select Difficulty:</label>
+        <select name="difficulty" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="game-section" style="display: none">
+      <div id="welcome-message"></div>
+
+      <h1>Guess the name of the Emoji</h1>
+
+      <div>Score: <span id="score">0</span></div>
+      <div id="emojis-display"></div>
+
+      <form onsubmit="submitAnswer(event)" id="emoji-choice-form">
+        <h2>Pick an answer</h2>
+        <div id="options-display"></div>
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="answer-info"></div>
+
+      <button onclick="finishGame()">Finish Game</button>
+    </section>
+  </body>
+</html>
