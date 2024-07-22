@@ -36,12 +36,12 @@ async function getAPost(req, res) {
 async function createAPost(req, res) {
   const { title, content } = req.body;
 
+  if (!title || !content) {
+    return res.status(400).json({ error: "Title and content are required." });
+  }
+
   try {
     const newPost = await _createAPost(title, content);
-
-    if (!title || !content) {
-      return res.status(400).json({ error: "Title and content are required." });
-    }
 
     res.status(200).json(newPost);
   } catch (err) {

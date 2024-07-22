@@ -34,14 +34,14 @@ async function getABook(req, res) {
 async function createABook(req, res) {
   const { title, author, publishedyear } = req.body;
 
+  if (!title || !author || !publishedyear) {
+    return res
+      .status(400)
+      .json({ error: "Title, author, and publishedyear are required." });
+  }
+
   try {
     const newBook = await _createABook(title, author, publishedyear);
-
-    if (!title || !author || !publishedyear) {
-      return res
-        .status(400)
-        .json({ error: "Title, author, and publishedyear are required." });
-    }
 
     res.status(200).json(newBook);
   } catch (err) {
