@@ -11,20 +11,20 @@ function App() {
   ]);
 
   function addVote(index) {
-    const newLanguages = languages.map((lan, i) => {
-      if (i === index) {
-        return { ...lan, votes: lan.votes + 1 };
-      }
+    const updatedLanguages = languages.map((lan, i) => {
+      if (i === index) return { ...lan, votes: lan.votes + 1 };
+
       return lan;
     });
-    setLanguages(newLanguages);
+
+    setLanguages(updatedLanguages);
   }
 
   return (
     <>
       {languages.map((lan, i) => {
         return (
-          <div className="container" key={i}>
+          <div key={i}>
             <span>{lan.votes}</span>
             <span>{lan.name}</span>
             <button onClick={() => addVote(i)}>Click Here</button>
