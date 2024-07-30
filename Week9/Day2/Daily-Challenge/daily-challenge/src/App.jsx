@@ -11,12 +11,8 @@ function App() {
   ]);
 
   function addVote(index) {
-    const updatedLanguages = languages.map((lan, i) => {
-      if (i === index) return { ...lan, votes: lan.votes + 1 };
-
-      return lan;
-    });
-
+    const updatedLanguages = [...languages];
+    updatedLanguages[index].votes++;
     setLanguages(updatedLanguages);
   }
 
