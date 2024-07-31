@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(89, 89, 89);
+
+  .container {
+    position: relative;
+    max-height: 32rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid lightgrey;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    padding-bottom: 3.5rem;
+    background-color: rgb(241, 241, 241);
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid rgb(189, 189, 189);
+      border-radius: 0.3rem;
+      font-size: 1.2rem;
+      color: rgb(89, 89, 89);
+    }
+
+    ul {
+      position: relative;
+      margin-bottom: 1.8rem;
+      width: 100%;
+      padding: 0.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      border: 1px solid rgba(203, 203, 203, 0.721);
+      border-radius: 0.3rem;
+      overflow-y: scroll;
+
+      li {
+        position: relative;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid lightgrey;
+        border-radius: 0.3rem;
+        background-color: rgb(236, 236, 236);
+        text-align: center;
+      }
+    }
+
+    .suggestions {
+      position: absolute;
+      bottom: 0;
+      height: 2.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.3rem;
+      background-color: rgb(255, 213, 0);
+      border: 1px solid rgb(255, 237, 36);
+      border-radius: 0 0 0.4rem 0.4rem;
+    }
+  }
+}
