@@ -1,0 +1,152 @@
+:root {
+  --color-dark: #071526;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+body,
+.app {
+  position: relative;
+  min-height: 100vh;
+  color: var(--color-dark);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.fa-spin {
+  color: var(--color-dark);
+  font-size: 5rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+
+  input {
+    padding: 0.7rem 0.8rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    margin: 3rem 0 3rem 0;
+    color: var(--color-dark);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+  button {
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all 0.1s;
+
+    i {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: var(--color-dark);
+
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+.category-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+h1 {
+  width: fit-content;
+  font-size: 3rem;
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.6rem 1.7rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: var(--color-dark);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  &:hover {
+    background-color: #0c243f;
+  }
+}
+
+.select-container {
+  label {
+    font-size: 1.5rem;
+  }
+
+  select {
+    padding: 0.4rem;
+    width: 5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+
+    margin: 3rem 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 80vw;
+  justify-content: center;
+  margin-bottom: 7rem;
+
+  img {
+    height: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: all 0.3s;
+
+    &:hover {
+      scale: 1.02;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0.5rem;
+}
