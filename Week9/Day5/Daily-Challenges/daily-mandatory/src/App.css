@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #2a0554;
+  color: #c99afb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+select,
+input {
+  border: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: #2a0554;
+  background-color: #c99afb;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.select-container,
+.inputs-container {
+  display: flex;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+input {
+  width: 15rem;
+  background-color: #c99afb;
+  color: #2a0554;
+  padding: 0.8rem;
+  font-size: 3rem;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem 1.3rem 0.5rem 1.3rem;
+  cursor: pointer;
+  color: #c99afb;
+  background-color: #5300dd;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sum {
+  width: fit-content;
+  font-size: 6rem;
+  font-weight: bold;
+}
