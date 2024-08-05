@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: rgb(79, 79, 79);
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem 2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &:hover {
+    background-color: rgb(252, 252, 252);
+  }
+}
+
+input {
+  width: 20rem;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    width: 20rem;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+ul {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    button {
+      position: absolute;
+      right: 4rem;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .edit-btn {
+      border: 1px solid rgb(0, 157, 255);
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: rgba(0, 157, 255, 0.032);
+      }
+    }
+
+    .del-btn {
+      border: 1px solid rgb(255, 73, 73);
+      right: 1rem;
+      height: 1.6rem;
+      width: 1.6rem;
+      padding: 0.1rem 0.5rem 0.5rem 0.5rem;
+      font-size: 1rem;
+      border-radius: 100%;
+      transition: all 0.1s;
+
+      &:hover {
+        color: rgb(255, 73, 73);
+      }
+    }
+  }
+}
