@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(68, 68, 68);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+
+  input {
+    width: 18rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+button {
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &:hover {
+    background-color: rgb(251, 251, 251);
+  }
+}
+
+.filter-btn {
+  width: fit-content;
+  align-self: center;
+  border: 1px solid rgb(255, 187, 0);
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+ul {
+  height: 25rem;
+  width: 20rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    list-style-type: none;
+    font-size: 1.3rem;
+    padding: 0 0.5rem 0.8rem 0.5rem;
+    border-bottom: 1px solid rgb(225, 225, 225);
+
+    input {
+      border: 1px solid rgb(199, 199, 199);
+      border-radius: 0.4rem;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .edit-btn {
+      position: absolute;
+      right: 2.2rem;
+      border: none;
+      border-radius: 0.3rem;
+      padding: 0.4rem 0.7rem;
+      color: rgb(0, 132, 255);
+      font-size: 0.8rem;
+      border: 1px solid transparent;
+      transition: all 0.1s;
+
+      &:hover {
+        border: 1px solid rgb(0, 132, 255);
+      }
+    }
+
+    .del-btn {
+      border-radius: 100%;
+      border: none;
+      padding: 0.05rem 0.4rem 0.15rem 0.4rem;
+      position: absolute;
+      right: 0;
+      font-size: 0.9rem;
+      color: rgb(255, 57, 57);
+      border: 1px solid transparent;
+      transition: all 0.1s;
+
+      &:hover {
+        border: 1px solid rgb(255, 57, 57);
+      }
+    }
+  }
+}
