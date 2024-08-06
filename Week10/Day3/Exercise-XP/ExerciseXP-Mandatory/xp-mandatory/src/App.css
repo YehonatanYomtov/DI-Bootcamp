@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: rgb(79, 79, 79);
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem 2rem;
+  background-color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &:hover {
+    background-color: rgb(252, 252, 252);
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    width: 20rem;
+    border: none;
+    border-radius: 0.7rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+ul {
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  .item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    &:hover {
+      background-color: rgb(244, 255, 243);
+    }
+
+    li {
+      font-size: 2rem;
+      cursor: pointer;
+      list-style-type: none;
+    }
+
+    li.done {
+      text-decoration: line-through;
+    }
+
+    button {
+      height: 1.6rem;
+      width: 1.6rem;
+      padding: 0.2rem 0.5rem;
+      font-size: 1rem;
+      border-radius: 100%;
+      transition: all 0.1s;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
