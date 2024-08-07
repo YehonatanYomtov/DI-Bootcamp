@@ -23,6 +23,7 @@ export const usersSlice = createSlice({
     builder
       .addCase(fetchUsers.pending, (state, action) => {
         state.status = "loading";
+        state.error = "";
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.status = "success";

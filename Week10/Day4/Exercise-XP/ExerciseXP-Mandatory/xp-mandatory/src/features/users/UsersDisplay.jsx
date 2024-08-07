@@ -6,8 +6,8 @@ import { fetchUsers } from "./usersSlice";
 
 // Components
 import UserCard from "./UserCard";
-import LoadingSpinner from "./LoadingSpinner";
-import ErrorDisplay from "./ErrorDisplay";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import ErrorDisplay from "../../components/ErrorDisplay";
 
 function UsersDisplay() {
   const users = useSelector((state) => state.users.users);
@@ -23,7 +23,7 @@ function UsersDisplay() {
     <div className="main-container">
       {status === "loading" && <LoadingSpinner />}
 
-      {status === "error" && <ErrorDisplay />}
+      {status === "error" && <ErrorDisplay error={error} />}
 
       {(status === "idle" || status === "success") && !error && (
         <div className="users-container">
