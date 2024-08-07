@@ -13,12 +13,28 @@
   align-items: center;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: rgb(0, 162, 255);
+    font-size: 4.5rem;
+  }
+}
+
 .users-container {
+  height: 80vh;
   width: 80vw;
+  overflow-y: scroll;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px inset;
 
   .user-card {
     width: 15rem;
@@ -42,5 +58,28 @@
       text-align: center;
       margin-bottom: 0.6rem;
     }
+  }
+}
+
+.err-display-container {
+  height: 10rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid rgb(255, 53, 53);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  p:first-child {
+    color: red;
+    font-size: 1.5rem;
   }
 }
