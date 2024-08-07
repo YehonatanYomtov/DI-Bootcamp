@@ -22,9 +22,7 @@ function UsersDisplay() {
   return (
     <div className="main-container">
       {status === "loading" && <LoadingSpinner />}
-
       {status === "error" && <ErrorDisplay error={error} />}
-
       {(status === "idle" || status === "success") && !error && (
         <div className="users-container">
           {users.map((user) => (
