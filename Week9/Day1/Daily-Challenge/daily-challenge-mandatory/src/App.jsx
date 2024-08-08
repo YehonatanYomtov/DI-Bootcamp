@@ -1,5 +1,5 @@
 import "./App.css";
-import DemoCarousel from "./DemoCarousel.jsx";
+import DemoCarousel from "./DemoCarousel.jsx.jsx";
 
 function App() {
   const imagesUrl = [
