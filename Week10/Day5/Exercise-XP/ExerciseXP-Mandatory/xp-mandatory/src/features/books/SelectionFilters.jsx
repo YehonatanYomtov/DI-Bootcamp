@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 
-const genres = ["Horror", "Fantasy", "Science Fiction"];
+const genres = ["All", "Horror", "Fantasy", "Science Fiction"];
 
 function SelectionFilters({ setGenre }) {
   const selectRef = useRef(null);

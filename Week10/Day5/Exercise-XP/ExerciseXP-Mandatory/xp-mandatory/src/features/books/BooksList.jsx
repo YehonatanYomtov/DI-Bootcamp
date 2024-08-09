@@ -1,19 +1,17 @@
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 // Components
 import SelectionFilters from "./SelectionFilters";
 import Book from "./Book";
 
-// Custom Hooks
-import { selectBooks } from "./booksSelectors";
-
 // Selectors
 import {
+  selectBooks,
   selectFantasyBooks,
   selectHorrorBooks,
   selectScienceFictionBooks,
 } from "./booksSelectors";
-import { useState } from "react";
 
 function BooksList() {
   const [genre, setGenre] = useState("");
@@ -31,13 +29,14 @@ function BooksList() {
         return fantasyBooks;
       case "Science Fiction":
         return scienceFictionBooks;
+      case "All":
       default:
         return books;
     }
   };
 
   return (
-    <div className="books-main-container">
+    <div>
       <SelectionFilters setGenre={setGenre} />
 
       <div className="books-list-container">

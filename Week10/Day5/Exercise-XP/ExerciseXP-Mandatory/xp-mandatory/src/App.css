@@ -10,22 +10,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
-}
-
-.books-main-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  padding: 12rem 0 6rem 0;
 }
 
 select {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 15rem;
   font-size: 1.3rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid rgb(190, 190, 190);
+  border: 2px solid rgb(160, 28, 160);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -52,8 +49,8 @@ select {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   h3 {
-    color: rgb(160, 28, 160);
-    font-size: 1.4rem;
+    color: rgb(200, 35, 200);
+    font-size: 1.5rem;
   }
 
   strong {
