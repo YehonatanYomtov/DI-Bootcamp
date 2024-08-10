@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.App {
+  height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+.task-item.completed h3,
+.task-item.completed p {
+  text-decoration: line-through;
+  color: gray;
+}
