@@ -6,15 +6,170 @@
 }
 
 .App {
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 0;
+}
+
+h1 {
+  color: rgb(0, 173, 0);
+  font-size: 2.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  color: rgb(71, 71, 71);
+  font-size: 1.8rem;
+}
+
+button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(11, 163, 11);
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.1s;
+
+  &:hover {
+    background-color: rgb(11, 163, 11);
+    color: white;
+  }
+}
+
+select,
+input,
+textarea {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(5, 91, 5);
+  border: 1px solid rgb(11, 163, 11);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 1.1rem;
+}
+
+.category-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.task-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.task-count {
+  margin: 2rem 0;
+  font-size: 1.4rem;
 }
 
 li {
   list-style-type: none;
 }
 
+.task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-item {
+  position: relative;
+  width: 32rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(18, 226, 18);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  h3 {
+    color: rgb(0, 115, 0);
+    font-size: 1.2rem;
+    width: 15rem;
+    text-wrap: wrap;
+  }
+
+  p {
+    color: rgb(71, 71, 71);
+    width: 15rem;
+    text-wrap: wrap;
+  }
+
+  input {
+    width: 10rem;
+    font-size: 1rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+    position: absolute;
+    left: 12rem;
+    height: 2.4rem;
+    width: 10rem;
+  }
+
+  button {
+    border: 1px solid rgb(0, 119, 255);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.task-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btns-container {
+  align-self: end;
+  display: flex;
+  gap: 0.6rem;
+
+  button {
+    border: none;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+.edit-btn {
+  &:hover {
+    background-color: rgb(0, 119, 255);
+  }
+}
+
+.del-btn {
+  &:hover {
+    background-color: rgb(255, 70, 70);
+  }
+}
+
 .task-item.completed h3,
 .task-item.completed p {
   text-decoration: line-through;
   color: gray;
+}
+
+.task-item.completed {
+  border: 1px solid rgb(0, 116, 0);
+  background-color: rgb(232, 232, 232);
 }

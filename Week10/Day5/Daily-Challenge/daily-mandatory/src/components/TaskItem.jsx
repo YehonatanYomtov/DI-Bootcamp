@@ -33,15 +33,24 @@ function TaskItem({
         </>
       ) : (
         <>
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-          {!task.completed && (
-            <>
-              <button onClick={handleEdit}>Edit</button>
-              <button onClick={() => onComplete(task.id)}>Complete</button>
-            </>
-          )}
-          <button onClick={() => onDelete(task.id)}>Delete</button>
+          <div className="task-text-container">
+            <h3>{task.title}</h3>
+            <p>{task.description}</p>
+          </div>
+
+          <div className="btns-container">
+            {!task.completed && (
+              <>
+                <button className="edit-btn" onClick={handleEdit}>
+                  Edit
+                </button>
+                <button onClick={() => onComplete(task.id)}>Complete</button>
+              </>
+            )}
+            <button className="del-btn" onClick={() => onDelete(task.id)}>
+              Delete
+            </button>
+          </div>
         </>
       )}
     </div>

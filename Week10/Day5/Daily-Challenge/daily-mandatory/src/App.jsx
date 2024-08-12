@@ -58,7 +58,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="App">
       <h1>Productivity Tracker</h1>
 
       <CategorySection
