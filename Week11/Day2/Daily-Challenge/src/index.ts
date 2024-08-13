@@ -1,4 +1,4 @@
-const allowedTypes = ["string", "number"];
+const allowedTypes: string[] = ["string", "number"];
 
 function validateUnionType(value: any, arr: string[]): boolean {
   for (const allowedType of arr) {
