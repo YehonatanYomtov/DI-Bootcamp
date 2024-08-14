@@ -6,29 +6,45 @@ type User = {
   name: string;
   username: string;
   email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
 };
 
 function UsersDisplay() {
   const [users, setUsers] = useState<User[]>([]);
+  const [status, setStatus] = useState<string>("idle");
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     async function fetchUsers() {
+      setStatus("loading");
       try {
         const res = await fetch("https://jsonplaceholder.typicode.com/users");
-        const data = await res.json();
+        const data: User[] = await res.json();
 
-        const modifiedUsers: User[] = data.map((user: User) => {
-          return {
-            id: user.id,
-            name: user.name,
-            username: user.username,
-            email: user.email,
-          };
-        });
+        if (!res.ok) throw new Error("Problem with fetching users.");
 
-        setUsers(modifiedUsers);
+        setStatus("success");
+        setUsers(data);
       } catch (err) {
-        console.error(err);
+        const error = err as Error;
+        console.error(error.message);
+        setError(error.message);
       }
     }
 
@@ -37,9 +53,13 @@ function UsersDisplay() {
 
   return (
     <div className="users-display-container">
-      {users.map((user) => (
-        <User user={user} key={user.id} />
-      ))}
+      {error && <h3>{error}</h3>}
+
+      {status === "loading" && <h3>...Loading</h3>}
+
+      {status === "idle" ||
+        (status === "success" &&
+          users.map((user) => <User user={user} key={user.id} />))}
     </div>
   );
 }
