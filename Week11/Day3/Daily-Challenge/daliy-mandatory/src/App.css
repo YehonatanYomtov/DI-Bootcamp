@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+li {
+  list-style-type: none;
+}
+
+.add-task-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input,
+  button {
+    padding: 0.5rem 1rem;
+    border: 1px solid grey;
+    border-radius: 0.3rem;
+    font-size: 1.1rem;
+    color: rgb(234, 0, 255);
+  }
+
+  input::placeholder {
+    color: rgb(247, 163, 255);
+  }
+
+  button {
+    color: rgb(149, 53, 130);
+    background-color: white;
+    border: 1px solid rgb(234, 0, 255);
+
+    &:hover {
+      color: white;
+      background-color: rgb(234, 0, 255);
+    }
+  }
+}
+
+.tasks-list {
+  height: 25rem;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid grey;
+  border-radius: 0.4rem 0rem 0rem 0.4rem;
+  overflow-y: scroll;
+
+  p {
+    text-align: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+
+    &:hover {
+      color: rgb(0, 166, 0);
+    }
+  }
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(234, 0, 255);
+  border-bottom: 1px solid rgb(217, 217, 217);
+
+  button {
+    border: none;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: rgb(255, 65, 65);
+
+    &:hover {
+      scale: 1.5;
+    }
+  }
+}
+
+.complete {
+  text-decoration: line-through;
+  color: rgb(198, 198, 198);
+}
